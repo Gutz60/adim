@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="wow-animation" lang="pt-br">
+
+<head>
+  <title>Pagina Inicial</title>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="TCC Etec - Raiane, paulo, nicolau pega no meu pau">
+  <meta name="date" content="Dec 26">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,700,700italic">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">]
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <style>
+    .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+
+/* Garante que a seção ocupe a tela toda e é centralizada */
+.section-98 {
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente no centro */
+  align-items: center; /* Alinha verticalmente no centro */
+  min-height: 100vh; /* Garante que a seção ocupe toda a altura da janela */
+  padding: 30px 0; /* Adiciona um padding vertical para espaçamento */
+}
+
+/* Garante que o container tem um layout flexível */
+.container {
+  max-width: 1200px; /* Limita a largura máxima do conteúdo */
+  width: 100%;
+  padding: 0 15px; /* Adiciona padding lateral */
+}
+
+/* Centraliza o título principal */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilos para o separador horizontal */
+hr.divider {
+  width: 50px;
+  height: 3px;
+  background-color: #d9534f; /* Cor de fundo para o separador */
+  border: none;
+  margin: 20px auto;
+}
+
+/* Ajusta o espaçamento e alinha os membros de maneira centralizada */
+.row {
+  display: flex;
+  justify-content: center; /* Centraliza as colunas na linha */
+  flex-wrap: wrap; /* Permite que as colunas se ajustem para novas linhas se necessário */
+}
+
+.col-md-6, .col-xl-3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px; /* Espaçamento inferior entre as colunas */
+}
+
+
+/* Ajusta o botão "View all coaches" */
+.btn-danger {
+  display: block;
+  margin: 30px auto;
+  background-color: #830094;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-color: #830094;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #650173; /* Cor mais escura ao passar o mouse */
+}
+
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <!--
+
+      Destacar nossa identidade visual!!!
+      Pgina para fazer as pessoas a se matricularem e mostrar mais detalhadamente nosso produto.
+    
+    -->
+
+  <!-- IE Panel-->
+  <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="
+Você esta usando um navegador desatualizado. Para uma experiência de navegação mais rápida e segura, atualize."></a>
+  </div>
+  <div class="page-loader page-loader-variant-1">
+    <div><img width='250' height='250' src='images/logo.png' alt='' />
+      <div class="offset-top-41 text-center">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Page-->
+  <div class="page text-center">
+    <!-- Head da pagina (deixar mais bonito)-->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
+        <div class="container-fluid d-flex justify-content-between">
+          <a class="navbar-brand" href="./ficha/login.html"><img src="images/navlogo.png" alt="" width="20%"></a>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto"> <!-- ms-auto para alinhar as opções à direita -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-coach.html">Ficha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ficha/avaliacao_fisica.php">Produtos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  FeedBack
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="contacts.html">FeedBack</a></li>
+                  <li><a class="dropdown-item" href="ficha/marcar_consulta.php">Ajuda</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-cart3"></i></a>
+              </li>
+            </ul>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div class="image-header">
+      <div class="cont">
+        <h3>A vida e boa shhHHHAHAHAHAHAHAHHA</h3>
+        <button class="btn btn-primary">Começar</button>
+      </div>
+    </div>
+    <!--Welcome-->
+    <section class="section-98 section-md-110 novi-background"
+      data-preset='{"title":"Content block 1","category":"content","id":"content-block-1"}'>
+      <div class="container">
+        <h1>Bem-Vindo!</h1>
+        <hr class="divider bg-red">
+        <div class="row justify-content-sm-center offset-top-66">
+          <div class="col-xl-8">
+            <p>Aqui começa o primeiro passo para a sua mudança. Conheça nosso site e siga os passos que vão transformar
+              a sua vida!</p>
+          </div>
+        </div>
+        <div class="row justify-content-center grid-group-lg offset-top-98">
+          <div class="col-md-8 col-lg-4">
+            <!-- Icon Box Type 5-->
+            <div class="box-icon box-icon-bordered"><span
+                class="novi-icon icon icon-outlined icon-sm icon-dark-filled mdi mdi-account-multiple"></span></button>
+              <h4 class="text-danger offset-top-20">Login</h4>
+              <p>Comece aqui a sua nova rotina</p>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-4">
+            <!-- Icon Box Type 5-->
+            <div class="box-icon box-icon-bordered"><span
+                class="novi-icon icon icon-outlined icon-xs icon-dark-filled mdi mdi-thumb-up"></span>
+              <h4 class="text-danger offset-top-20">Ficha</h4>
+              <p>Seu corpo dos sonhos em poucos meses</p>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-4">
+            <!-- Icon Box Type 5-->
+            <div class="box-icon box-icon-bordered"><span
+                class="novi-icon icon icon-outlined icon-sm icon-dark-filled mdi mdi-dumbbell"></span>
+              <h4 class="text-danger offset-top-20">Produtos</h4>
+              <p>Produtos que vão te auxiliar para o dia a dia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="divider bg-red">
+    <div class="row justify-content-sm-center offset-top-66">
+      <div class="col-xl-8">
+        <h3>Todos os benefícios que a A.D.M oferece para você!</h3>
+      </div>
+    </div>
+    <br>
+    <!-- Offers-->
+    <section data-preset='{"title":"Carousel 1","category":"content, carousel","reload":true,"id":"carousel-1"}'>
+      <div class="owl-carousel owl-carousel-default d-lg-none-owl-dots veil-owl-nav d-lg-owl-nav" data-items="1"
+        data-sm-items="2" data-lg-items="3" data-xl-items="4" data-nav="true" data-dots="true"
+        data-nav-class="[&quot;owl-prev mdi mdi-chevron-left&quot;, &quot;owl-next mdi mdi-chevron-right&quot;]">
+        <div>
+          <!-- Thumbnail Terry-->
+          <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/img1.jpg" alt="" /></a>
+            <figcaption>
+              <div>
+                <h4 class="thumbnail-terry-title">Bodybuilding</h4>
+              </div>
+              <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger"
+                href="#">Veja os planos disponíveis </a>
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <!-- Thumbnail Terry-->
+          <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/img2.jpg" alt="" /></a>
+            <figcaption>
+              <div>
+                <h4 class="thumbnail-terry-title">Fitness</h4>
+              </div>
+              <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger"
+                href="#">Veja os planos disponíveis </a>
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <!-- Thumbnail Terry-->
+          <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/img3.jpg" alt="" /></a>
+            <figcaption>
+              <div>
+                <h4 class="thumbnail-terry-title">Crossfit</h4>
+              </div>
+              <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger"
+                href="#">Veja os planos disponíveis </a>
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <!-- Thumbnail Terry-->
+          <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/img4.jpg" alt="" /></a>
+            <figcaption>
+              <div>
+                <h4 class="thumbnail-terry-title">Circle Studio</h4>
+              </div>
+              <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger"
+                href="#">Veja os planos disponíveis </a>
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <!-- Thumbnail Terry-->
+          <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/img5.jpg" alt="" /></a>
+            <figcaption>
+              <div>
+                <h4 class="thumbnail-terry-title">Strength Training</h4>
+              </div>
+              <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger"
+                href="#">Veja os planos disponíveis </a>
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <!-- Thumbnail Terry-->
+          <figure class="thumbnail-terry"><a href="#"><img width="480" height="480" src="images/img6.jpg" alt="" /></a>
+            <figcaption>
+              <div>
+                <h4 class="thumbnail-terry-title">Yoga</h4>
+              </div>
+              <p class="thumbnail-terry-desc offset-top-0"></p><a class="btn offset-top-10 offset-lg-top-0 btn-danger"
+                href="#">Veja os planos disponíveis </a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- Coaches-->
+    <section class="section-98 section-md-110 novi-background"
+      data-preset='{"title":"Team","category":"content, team","reload":false,"id":"team"}'>
+      <div class="container">
+        <h1>Conheça nossos treinadores</h1>
+        <hr class="divider bg-danger">
+        <div class="row justify-content-sm-center offset-top-66">
+          <div class="col-md-10 col-xl-12">
+            <div class="row">
+              <div class="col-md-6 col-xl-3">
+                <!-- Box Member-->
+                <div class="box-member"><img class="img-fluid" src="images/dani.jpg" alt="" />
+                  <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Daniel Faria</a>
+                    <p><small class="text-danger">Personal Trainer</small></p>
+                  </h5>
+                  <div class="box-member-caption">
+                    <div class="box-member-caption-inner">
+                      <ul class="list-inline list-inline-xs">
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-facebook icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-twitter icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-instagram icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <p class="offset-xl-top-0 text-muted">Treinador há mais de 6 anos e formado em educação física</p>
+              </div>
+              <div class="col-md-6 col-xl-3 offset-top-66 offset-md-top-0 offset-xl-top-0">
+                <!-- Box Member-->
+                <div class="box-member"><img class="img-fluid" src="images/camila.jpg" alt="" />
+                  <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Camila Guedes</a>
+                    <p><small class="text-danger">Personal Trainer</small></p>
+                  </h5>
+                  <div class="box-member-caption">
+                    <div class="box-member-caption-inner">
+                      <ul class="list-inline list-inline-xs">
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-facebook icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-twitter icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-instagram icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <p class="offset-xl-top-0 text-muted">Formada em Educação Física há mais de 3 anos.</p>
+              </div>
+              <div class="col-md-6 col-xl-3 offset-top-66 offset-md-top-0 offset-xl-top-0">
+                <!-- Box Member-->
+                <div class="box-member"><img class="img-fluid" src="images/gustavo.jpg" alt="" />
+                  <h5 class="font-weight-bold offset-top-20"><a href="about-coach.html">Gustavo Henrique</a>
+                    <p><small class="text-danger">Personal Trainer</small></p>
+                  </h5>
+                  <div class="box-member-caption">
+                    <div class="box-member-caption-inner">
+                      <ul class="list-inline list-inline-xs">
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-facebook icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-twitter icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                        <li class="list-inline-item"><a
+                            class="novi-icon icon fa fa-instagram icon-xs icon-circle icon-darkest-filled" href="#"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <p class="offset-xl-top-0 text-muted">Formado em Educação Física há mais de 2 anos. Experiencia em
+                  Crossfit</p>
+              </div>
+
+
+            </div>
+          </div><a class="offset-top-66 btn btn-danger" href="about-coach.html">view all coaches</a>
+        </div>
+      </div>
+  </div>
+  </section>
+  <!-- Testimonials-->
+  <section
+    data-preset='{"title":"Testimonials","category":"content, testimonials, parallax","reload":true,"id":"testimonials"}'>
+    <div class="parallax-container" data-parallax-img="images/img12.jpg">
+      <div class="parallax-content">
+        <div class="bg-overlay-gray-darkest context-dark">
+          <div class="container section-98 section-md-110">
+            <h1>
+              <h1>Comentários</h1>
+            </h1>
+            <hr class="divider bg-white">
+            <div class="row justify-content-sm-center">
+              <div class="col-md-8">
+                <!-- Testimonials Slider v.3-->
+                <div class="owl-carousel owl-carousel-testimonials-2" data-items="1" data-nav="true" data-dots="false"
+                  data-nav-class="[&quot;owl-prev mdi mdi-chevron-left&quot;, &quot;owl-next mdi mdi-chevron-right&quot;]">
+                  <div>
+                    <blockquote class="quote quote-slider-3">
+                      <p class="quote-body">Começei muito insegura se realmente consegiuria alcançar meus resulados, mas
+                        em pucos meses eu já estava notando a diferença.
+                        Com certeza estou muito satisfeita com os resultados.</p><img class="quote-img rounded-circle"
+                        width="80" height="80" src="images/img13.jpg" alt="Alice Wilson" />
+                      <p class="font-weight-bold quote-author">
+                        <cite class="text-normal">Alice Santos</cite>
+                      </p>
+                      <p class="quote-desc text-gray">Cliente regular</p>
+                    </blockquote>
+                  </div>
+                  <div>
+                    <blockquote class="quote quote-slider-3">
+                      <p class="quote-body">Antes eu não tinha tempo e nem academias perto da minha casa e seg.</p><img
+                        class="quote-img rounded-circle" width="80" height="80" src="images/img14.jpg"
+                        alt="Julie Smith" />
+                      <p class="font-weight-bold quote-author">
+                        <cite class="text-normal">Júlia Ferraz</cite>
+                      </p>
+                      <p class="quote-desc text-gray">Cliente regular</p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Page Footer-->
+
+
+  <footer
+    class="section-relative section-top-66 section-bottom-34 page-footer bg-gray-base context-dark novi-background"
+    data-preset='{"title":"Footer","category":"footer","reload":true,"id":"footer"}'>
+    <div class="container">
+      <div class="row text-xl-left">
+        <div class="col-md-12">
+          <div class="row">
+            <div
+              class="col-sm-10 col-md-3 text-left order-md-4 col-md-10 col-xl-3 offset-md-top-50 offset-xl-top-0 order-xl-2">
+              <div class="offset-top-50 text-sm-center text-xl-left">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-facebook icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-twitter icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-instagram icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-linkedin icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                </ul>
+              </div>
+              <p class="text-darker offset-top-20">A.D.M &copy; <span id="copyright-year"></span> .
+                <a class="nav-link" href="pp.html">Política de Privacidade</a>
+                <!-- NÃO pode tirar isso --> Design&nbsp;by&nbsp;<a
+                  href="https://www.templatemonster.com">TemplateMonster</a>
+            </div>
+            <div class="col-sm-10 col-md-3 offset-top-66 order-md-1 offset-md-top-0 col-md-6 col-xl-3 order-xl-1">
+              <!-- Footer brand-->
+              <div class="footer-brand"><a href="index.html"><img width='200' height='200' src='images/logo.png'
+                    alt='' /></a></div>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- Java script-->
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

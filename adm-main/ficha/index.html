@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Ficha de Treino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Formulário de Ficha de Treino</h2>
+    <form action="processar_ficha.php" method="POST">
+        <label for="nivel">Nível de Exercício:</label><br>
+        <input type="radio" id="sedentario" name="nivel" value="sedentario" required>
+        <label for="sedentario">Sedentário</label><br>
+        <input type="radio" id="intermediario" name="nivel" value="intermediario" required>
+        <label for="intermediario">Intermediário</label><br>
+        <input type="radio" id="avancado" name="nivel" value="avancado" required>
+        <label for="avancado">Avançado</label><br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required><br><br>
+
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" id="masculino" name="sexo" value="masculino" required>
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="feminino" name="sexo" value="feminino" required>
+        <label for="feminino">Feminino</label><br><br>
+
+        <label for="foco">Foco do Treino:</label><br>
+        <input type="radio" id="braco" name="foco" value="braco" required>
+        <label for="braco">Braço</label><br>
+        <input type="radio" id="peito" name="foco" value="peito" required>
+        <label for="peito">Peito</label><br>
+        <input type="radio" id="barriga" name="foco" value="barriga" required>
+        <label for="barriga">Barriga</label><br>
+        <input type="radio" id="pernas" name="foco" value="pernas" required>
+        <label for="pernas">Pernas</label><br>
+        <input type="radio" id="gluteo" name="foco" value="gluteo" required>
+        <label for="gluteo">Glúteo</label><br><br>
+
+        <button type="submit">Gerar Ficha de Treino</button>
+    </form>
+</body>
+</html>
