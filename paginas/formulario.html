@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Treino</title>
+    <!-- Incluindo o CSS do Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Monte sua Ficha de Treino Semanal</h1>
+        <form action="processa_ficha.php" method="post">
+            <div class="form-group">
+                <label for="focos">Selecione até 3 focos principais de treino:</label>
+                <select class="form-control" id="focos" name="focos[]" multiple required>
+                    <option value="perna">Perna</option>
+                    <option value="peito">Peito</option>
+                    <option value="costas">Costas</option>
+                    <option value="ombro">Ombro</option>
+                    <option value="braço">Braço</option>
+                </select>
+                <small id="focoHelp" class="form-text text-muted">Segure Ctrl (ou Command) para selecionar múltiplos focos.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Gerar Ficha de Treino</button>
+        </form>
+    </div>
+
+    <!-- Incluindo o JS do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
