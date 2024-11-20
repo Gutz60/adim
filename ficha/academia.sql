@@ -50,3 +50,19 @@ CREATE TABLE avaliacoes_fisicas (
     data_avaliacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
+
+CREATE TABLE trabalho_conosco (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    jobPosition VARCHAR(100) NOT NULL,
+    otherJob VARCHAR(100),
+    experience TEXT,
+    availability 
+    experience TEXT,
+    availabilit
+VARCHAR(20),
+    curriculum VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

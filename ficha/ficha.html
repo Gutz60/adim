@@ -8,112 +8,95 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sua Ficha de Treino</h1>
+        <h1 class="titulo">Sua Ficha de Treino</h1>
         <div id="resultadoFicha"></div>
         <a href="index.html" class="button">Voltar ao Formulário</a>
     </div>
 
     <script>
+      
         function getQueryParams() {
             const params = new URLSearchParams(window.location.search);
             return {
-                nivel: params.get('nivel'),
-                idade: parseInt(params.get('idade')),
-                sexo: params.get('sexo'),
-                foco: params.get('foco')
+                nivel: params.get('nivel') || 'não informado',
+                idade: parseInt(params.get('idade')) || 0,
+                sexo: params.get('sexo') || 'não informado',
+                foco: params.get('foco') || 'não informado'
             };
         }
 
+        // Função para gerar a ficha de treino
         function gerarFicha() {
             const { nivel, idade, sexo, foco } = getQueryParams();
+
+            // Verificação de parâmetros inválidos
+            if (!nivel || !idade || !sexo || !foco) {
+                document.getElementById('resultadoFicha').innerHTML = `
+                    <div class="card">
+                        <h3 class="card-title">Erro</h3>
+                        <p>Não foi possível gerar a ficha. Certifique-se de preencher todos os campos do formulário.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Começando a montar a ficha
             let ficha = `
-                <p><strong>Idade:</strong> ${idade} anos</p>
-                <p><strong>Sexo:</strong> ${sexo.charAt(0).toUpperCase() + sexo.slice(1)}</p>
-                <p><strong>Objetivo:</strong> Focar em ${foco.charAt(0).toUpperCase() + foco.slice(1)}</p>
-                <h3>Plano de Treino</h3>
+                <div class="card">
+                    <h3 class="card-title">Informações Gerais</h3>
+                    <p><strong>Idade:</strong> ${idade} anos</p>
+                    <p><strong>Sexo:</strong> ${sexo.charAt(0).toUpperCase() + sexo.slice(1)}</p>
+                    <p><strong>Objetivo:</strong> Focar em ${foco.charAt(0).toUpperCase() + foco.slice(1)}</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Plano de Treino</h3>
             `;
 
-            // Definindo a faixa etária
+            // Definindo faixa etária
             let faixaEtaria = '';
             if (idade >= 15 && idade <= 25) {
                 faixaEtaria = '15-25';
             } else if (idade >= 26 && idade <= 30) {
                 faixaEtaria = '26-30';
-            } else {
+            } else if (idade > 30) {
                 faixaEtaria = 'acima de 30';
+            } else {
+                faixaEtaria = 'idade inválida';
             }
 
-            // Gerando a ficha com base nas combinações de idade, nível e foco
+            // Gerando plano de treino baseado no nível
             if (nivel === 'sedentario') {
-                ficha += "<p>Treino para iniciantes, 3 vezes por semana.</p>";
+                ficha += "<p>Treino para iniciantes, 3 vezes por semana:</p><ul>";
                 if (faixaEtaria === '15-25') {
-                    ficha += `<ul>
+                    ficha += `
                         <li>Segunda: Exercícios básicos para ${foco} (3 séries de 12 repetições)</li>
                         <li>Quarta: Cardio leve (30 minutos)</li>
-                        <li>Sexta: Repetição do treino de ${foco} (3 séries de 12 repetições)</li>
-                    </ul>`;
+                        <li>Sexta: Repetição do treino de ${foco}</li>
+                    `;
                 } else if (faixaEtaria === '26-30') {
-                    ficha += `<ul>
+                    ficha += `
                         <li>Segunda: Exercícios para ${foco} (4 séries de 10 repetições)</li>
                         <li>Quarta: Cardio (caminhada ou bicicleta por 40 minutos)</li>
-                        <li>Sexta: Repetição de ${foco} (4 séries de 10 repetições)</li>
-                    </ul>`;
-                } else {
-                    ficha += `<ul>
+                        <li>Sexta: Repetição de ${foco}</li>
+                    `;
+                } else if (faixaEtaria === 'acima de 30') {
+                    ficha += `
                         <li>Segunda: Exercícios para ${foco} (4 séries de 12 repetições)</li>
                         <li>Quarta: Cardio leve (30 minutos)</li>
-                        <li>Sexta: Repetição do treino de ${foco} (4 séries de 12 repetições)</li>
-                    </ul>`;
-                }
-            } else if (nivel === 'intermediario') {
-                ficha += "<p>Treino para nível intermediário, 4-5 vezes por semana.</p>";
-                if (faixaEtaria === '15-25') {
-                    ficha += `<ul>
-                        <li>Segunda: Exercícios compostos para ${foco} (4 séries de 10-12 repetições)</li>
-                        <li>Terça: Cardio moderado (45 minutos)</li>
-                        <li>Quarta: Foco em ${foco} e core (4 séries de 10-12 repetições)</li>
-                        <li>Sexta: Cardio (40 minutos de corrida ou elíptico)</li>
-                    </ul>`;
-                } else if (faixaEtaria === '26-30') {
-                    ficha += `<ul>
-                        <li>Segunda: Exercícios de força para ${foco} (4-5 séries de 8-10 repetições)</li>
-                        <li>Quarta: Cardio moderado (45 minutos)</li>
-                        <li>Sexta: Foco em ${foco} e resistência (4-5 séries de 8-10 repetições)</li>
-                    </ul>`;
+                        <li>Sexta: Repetição do treino de ${foco}</li>
+                    `;
                 } else {
-                    ficha += `<ul>
-                        <li>Segunda: Musculação intensa para ${foco} (5 séries de 10 repetições)</li>
-                        <li>Quarta: Cardio moderado (50 minutos)</li>
-                        <li>Sexta: Foco em ${foco} e abdominais (5 séries de 10 repetições)</li>
-                    </ul>`;
+                    ficha += "<li>Idade fora do alcance para este treino.</li>";
                 }
-            } else if (nivel === 'avancado') {
-                ficha += "<p>Treino avançado, 5-6 vezes por semana.</p>";
-                if (faixaEtaria === '15-25') {
-                    ficha += `<ul>
-                        <li>Segunda: Exercícios pesados para ${foco} (5 séries de 8-10 repetições)</li>
-                        <li>Terça: Cardio intenso (HIIT por 30 minutos)</li>
-                        <li>Quarta: Foco em ${foco} e resistência (5 séries de 8-10 repetições)</li>
-                        <li>Sexta: Cardio intenso (HIIT por 30 minutos)</li>
-                    </ul>`;
-                } else if (faixaEtaria === '26-30') {
-                    ficha += `<ul>
-                        <li>Segunda: Treino pesado de ${foco} (5 séries de 8 repetições)</li>
-                        <li>Quarta: Cardio intenso (HIIT por 40 minutos)</li>
-                        <li>Sexta: Foco em ${foco} e resistência (5 séries de 8 repetições)</li>
-                    </ul>`;
-                } else {
-                    ficha += `<ul>
-                        <li>Segunda: Musculação avançada para ${foco} (6 séries de 6 repetições)</li>
-                        <li>Quarta: Cardio intenso (HIIT por 45 minutos)</li>
-                        <li>Sexta: Foco em ${foco} e abdominais (6 séries de 6 repetições)</li>
-                    </ul>`;
-                }
+            } else {
+                ficha += "<p>Nível de treino não suportado.</p>";
             }
-
+            ficha += "</ul></div>";
+  // Exibindo a ficha
             document.getElementById('resultadoFicha').innerHTML = ficha;
         }
 
+        // Gerar a ficha ao carregar a página
         gerarFicha();
     </script>
 </body>

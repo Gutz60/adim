@@ -2,49 +2,47 @@
 session_start();
 include('db.php');
 
-// Verifica se o usuário está logado
 if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.html"); // Redireciona para o login
+    header("Location: login.php");
     exit;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recuperando dados do formulário
+    // Obtendo os dados do formulário
     $nivel = $_POST['nivel'];
     $idade = $_POST['idade'];
     $sexo = $_POST['sexo'];
     $foco = $_POST['foco'];
 
-    // Recuperando o ID do usuário logado
+    // Obtendo o id do usuário da sessão
     $usuario_id = $_SESSION['usuario_id'];
-
-    // Gerando a ficha de treino com base nas respostas
-    $dados_adicionais = "Nivel: $nivel, Idade: $idade, Sexo: $sexo, Foco: $foco";
-
-    // Ficha de treino baseada nas respostas
+    
+    // Gerar a ficha de treino com base nos dados
     $ficha_treino = generateFicha($nivel, $idade, $sexo, $foco);
 
-    // Inserindo a ficha de treino no banco de dados
-    $sql = "INSERT INTO informacoes (usuario_id, dados_adicionais) VALUES ('$usuario_id', '$ficha_treino')";
+    // Inserir os dados na tabela 'informacoes'
+    $sql = "INSERT INTO informacoes (usuario_id, nivel, idade, sexo, foco) 
+            VALUES ('$usuario_id', '$nivel', '$idade', '$sexo', '$foco')";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: exibir_treino.php');  // Redireciona para a página que exibe o treino
+        // Se a inserção foi bem-sucedida, redireciona para a página de exibição do treino
+        header('Location: exibir_treino.php');
     } else {
         echo "Erro ao criar a ficha de treino: " . $conn->error;
     }
 
-    // Fechar conexão
+    // Fechar a conexão com o banco de dados
     $conn->close();
 }
 
-// Função que gera a ficha de treino com base nas opções
+// Função que gera a ficha de treino com base nas opções de nível, idade, sexo e foco
 function generateFicha($nivel, $idade, $sexo, $foco) {
     $ficha = "<p><strong>Idade:</strong> $idade anos</p>";
     $ficha .= "<p><strong>Sexo:</strong> " . ucfirst($sexo) . "</p>";
     $ficha .= "<p><strong>Objetivo:</strong> Focar em " . ucfirst($foco) . "</p>";
     $ficha .= "<h3>Plano de Treino</h3>";
 
-    // Gerando a ficha com base nas combinações de idade, nível e foco
+    // Gerando a ficha de treino com base no nível e foco
     if ($nivel === 'sedentario') {
         $ficha .= "<p>Treino para iniciantes, 3 vezes por semana.</p>";
         $ficha .= "<ul>

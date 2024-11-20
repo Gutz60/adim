@@ -2,7 +2,6 @@
 session_start();
 include('db.php');
 
-
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: login.php");
     exit;
@@ -10,45 +9,97 @@ if (!isset($_SESSION['usuario_id'])) {
 
 $usuario_id = $_SESSION['usuario_id'];
 
-
-$sql = "SELECT dados_adicionais FROM informacoes WHERE usuario_id = $usuario_id ORDER BY id DESC LIMIT 1";
+// Consulta para pegar os dados do usuário
+$sql = "SELECT nivel, idade, sexo, foco FROM informacoes WHERE usuario_id = $usuario_id ORDER BY id DESC LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $ficha_treino = $row['dados_adicionais'];
+    $nivel = $row['nivel'];
+    $idade = $row['idade'];
+    $sexo = $row['sexo'];
+    $foco = $row['foco'];
+
+    // Gerar a ficha de treino com base nos dados recuperados
+    $ficha_treino = generateFicha($nivel, $idade, $sexo, $foco);
 } else {
     $ficha_treino = "Você ainda não possui uma ficha de treino.";
 }
 
 $conn->close();
+
+// Função que gera a ficha de treino com base nos dados do usuário
+function generateFicha($nivel, $idade, $sexo, $foco) {
+    $ficha = "<div class='ficha-item'><strong>Idade:</strong> $idade anos</div>";
+    $ficha .= "<div class='ficha-item'><strong>Sexo:</strong> " . ucfirst($sexo) . "</div>";
+    $ficha .= "<div class='ficha-item'><strong>Objetivo:</strong> Focar em " . ucfirst($foco) . "</div>";
+    $ficha .= "<h3 class='treino-titulo'>Plano de Treino</h3>";
+
+    // Gerando o treino com base no nível e foco
+    if ($nivel === 'sedentario') {
+        $ficha .= "<div class='ficha-item'>Treino para iniciantes, 3 vezes por semana:</div>";
+        $ficha .= "<ul class='ficha-list'>
+                    <li>Segunda: Exercícios para $foco (3 séries de 12 repetições)</li>
+                    <li>Quarta: Cardio leve (30 minutos)</li>
+                    <li>Sexta: Repetição do treino de $foco (3 séries de 12 repetições)</li>
+                    </ul>";
+    } elseif ($nivel === 'intermediario') {
+        $ficha .= "<div class='ficha-item'>Treino para nível intermediário, 4-5 vezes por semana:</div>";
+        $ficha .= "<ul class='ficha-list'>
+                    <li>Segunda: Exercícios compostos para $foco (4 séries de 10-12 repetições)</li>
+                    <li>Terça: Cardio moderado (45 minutos)</li>
+                    <li>Quarta: Foco em $foco e core (4 séries de 10-12 repetições)</li>
+                    <li>Sexta: Cardio (40 minutos de corrida ou elíptico)</li>
+                    </ul>";
+    } elseif ($nivel === 'avancado') {
+        $ficha .= "<div class='ficha-item'>Treino avançado, 5-6 vezes por semana:</div>";
+        $ficha .= "<ul class='ficha-list'>
+                    <li>Segunda: Exercícios pesados para $foco (5 séries de 8-10 repetições)</li>
+                    <li>Terça: Cardio intenso (HIIT por 30 minutos)</li>
+                    <li>Quarta: Foco em $foco e resistência (5 séries de 8-10 repetições)</li>
+                    <li>Sexta: Cardio intenso (HIIT por 30 minutos)</li>
+                    </ul>";
+    }
+
+    return $ficha;
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ficha de Treino</title>
-  <link rel="stylesheet" href="treino.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Treino</title>
+    <link rel="stylesheet" href="style_ficha.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <body>
-  <div class="container">
-    <h2 class="titulo">Bem-vindo à sua Ficha de Treino</h2>
-    <div class="cartoes">
-      <?php if ($ficha_treino !== "Você ainda não possui uma ficha de treino.") : ?>
-        <?php $ficha_parts = explode("\n", $ficha_treino); ?>
-        <?php foreach ($ficha_parts as $part) : ?>
-          <div class="cartao">
-            <h2 class="cartao-titulo"><?php echo $part; ?></h2>
-          </div>
-        <?php endforeach; ?>
-      <?php else : ?>
-        <div class="cartao">
-          <p class="cartao-descricao"><?php echo $ficha_treino; ?></p>
+
+ 
+
+    <div class="container">
+        <div class="header">
+            <h1>Ficha de Treino Personalizada</h1>
         </div>
-      <?php endif; ?>
+
+        <div class="ficha-container">
+            <?php if ($ficha_treino !== "Você ainda não possui uma ficha de treino.") : ?>
+                <div class="ficha">
+                    <?php echo $ficha_treino; ?>
+                </div>
+            <?php else : ?>
+                <div class="ficha">
+                    <p><?php echo $ficha_treino; ?></p>
+                </div>
+            <?php endif; ?>
+        </div>
+
+        <div class="footer">
+            <a href="./about-coach.html" class="btn-voltar"><i class="bi bi-arrow-left-circle"></i>Voltar</a>
+        </div>
     </div>
-  </div>
+
 </body>
 </html>

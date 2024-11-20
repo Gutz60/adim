@@ -1,17 +1,18 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0f0c25;
-    color: #fff;
+    background-color: #0069c0;
+    color: #ffffff;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    min-height: 100vh; /* Garante que o conteúdo ocupa a altura total da janela */
-    margin: 0; /* Remove a margem padrão */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: aquamarine;
+    color: #ab3ed8;
+    font-weight: bold;
 }
 
 #login {
@@ -22,36 +23,18 @@ a {
     flex-direction: row;
 }
 
-.nome input {
-    border-radius: 15px;
-    border: none;
-    width: 250px;
-    height: 40px;
-    padding-left: 15px;
-    background-color: #1e1c2e;
-    color: #b6b6b6;
-    margin-bottom: 15px;
-}
-
-.email input {
-    border-radius: 15px;
-    border: none;
-    width: 250px;
-    height: 40px;
-    padding-left: 15px;
-    background-color: #1e1c2e;
-    color: #b6b6b6;
-}
-
+.nome input,
+.email input,
 .senha input {
     border-radius: 15px;
-    border: none;
+    border: 2px solid #7f00b2;
     width: 250px;
     height: 40px;
     padding-left: 15px;
-    background-color: #1e1c2e;
-    color: #b6b6b6;
-    margin-top: 15px;
+    background-color: #ffffff;
+    color: #0069c0;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .entrar input {
@@ -60,22 +43,26 @@ a {
     height: 40px;
     border-radius: 20px;
     border: none;
-    background-color: rgb(134, 243, 134);
-    color: #141414;
+    background-color: #7f00b2;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .entrar input:hover {
-    background-color: rgb(102, 204, 102); /* Cor de fundo mais escura no hover */
-    transform: scale(1.1); /* Efeito de aumentar o tamanho */
+    background-color: #ab3ed8;
+    transform: scale(1.1);
 }
 
 input::placeholder {
-    color: #b6b6b6;
+    color: #7f00b2;
 }
 
 h1 {
-    color: #FAFAFA;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .caixa {
@@ -87,5 +74,7 @@ h1 {
 }
 
 input:focus {
-    outline: none;
+    outline: 2px solid #2196f3;
+    background-color: #f0f0f0;
+    color: #0069c0;
 }

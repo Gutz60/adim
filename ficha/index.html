@@ -7,38 +7,95 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Formulário de Ficha de Treino</h2>
-    <form action="processar_ficha.php" method="POST">
-        <label for="nivel">Nível de Exercício:</label><br>
-        <input type="radio" id="sedentario" name="nivel" value="sedentario" required>
-        <label for="sedentario">Sedentário</label><br>
-        <input type="radio" id="intermediario" name="nivel" value="intermediario" required>
-        <label for="intermediario">Intermediário</label><br>
-        <input type="radio" id="avancado" name="nivel" value="avancado" required>
-        <label for="avancado">Avançado</label><br><br>
+    <div class="container">
+        <div class="form">
+            <div class="form-header">
+                <h1>Ficha de Treino</h1>
+            </div>
+            
+           
+            
+            <form action="processar_ficha.php" method="POST">
+                
+                <!-- Nível de Exercício -->
+                <div class="input-group">
+                    <label for="nivel">Nível de Exercício:</label>
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="sedentario" name="nivel" value="sedentario" required>
+                            <label for="sedentario">Sedentário</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="intermediario" name="nivel" value="intermediario" required>
+                            <label for="intermediario">Intermediário</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="avancado" name="nivel" value="avancado" required>
+                            <label for="avancado">Avançado</label>
+                        </div>
+                    </div>
+                </div>
 
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade" required><br><br>
+                <!-- Idade -->
+                <div class="input-group">
+                    <label for="idade">Idade:</label>
+                    <div class="input-box">
+                        <input type="number" id="idade" name="idade" placeholder="Digite sua idade" required>
+                    </div>
+                </div>
 
-        <label for="sexo">Sexo:</label><br>
-        <input type="radio" id="masculino" name="sexo" value="masculino" required>
-        <label for="masculino">Masculino</label><br>
-        <input type="radio" id="feminino" name="sexo" value="feminino" required>
-        <label for="feminino">Feminino</label><br><br>
+                <!-- Sexo -->
+                <div class="input-group">
+                    <label for="sexo">Sexo:</label>
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="masculino" name="sexo" value="masculino" required>
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="feminino" name="sexo" value="feminino" required>
+                            <label for="feminino">Feminino</label>
+                        </div>
+                    </div>
+                </div>
 
-        <label for="foco">Foco do Treino:</label><br>
-        <input type="radio" id="braco" name="foco" value="braco" required>
-        <label for="braco">Braço</label><br>
-        <input type="radio" id="peito" name="foco" value="peito" required>
-        <label for="peito">Peito</label><br>
-        <input type="radio" id="barriga" name="foco" value="barriga" required>
-        <label for="barriga">Barriga</label><br>
-        <input type="radio" id="pernas" name="foco" value="pernas" required>
-        <label for="pernas">Pernas</label><br>
-        <input type="radio" id="gluteo" name="foco" value="gluteo" required>
-        <label for="gluteo">Glúteo</label><br><br>
+                <!-- Foco do Treino -->
+                <div class="input-group">
+                    <label for="foco">Foco do Treino:</label>
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="braco" name="foco" value="braco" required>
+                            <label for="braco">Braço</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="peito" name="foco" value="peito" required>
+                            <label for="peito">Peito</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="barriga" name="foco" value="barriga" required>
+                            <label for="barriga">Barriga</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="pernas" name="foco" value="pernas" required>
+                            <label for="pernas">Pernas</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="gluteo" name="foco" value="gluteo" required>
+                            <label for="gluteo">Glúteo</label>
+                        </div>
+                    </div>
+                </div>
 
-        <button type="submit">Gerar Ficha de Treino</button>
-    </form>
+                 <aside class="aviso">
+                <p><h3> ATENÇÃO ⚠️</h3> Caso você tenha alguma condição de saúde ou dúvida sobre a prática de exercícios, é nescessário e importante que você converse com um personal trainer antes de iniciar o seu treino.</p>
+            </aside>
+
+                <div class="continue-button">
+                    <button type="submit">Criar Ficha de Treino</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </body>
 </html>
