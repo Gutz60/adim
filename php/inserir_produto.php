@@ -11,7 +11,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Verifica se o formulário foi enviado com todos os campos necessários
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome']) && isset($_POST['descricao']) && isset($_POST['preco']) && isset($_POST['quantidade']) && isset($_POST['imagem'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome'], $_POST['descricao'], $_POST['preco'], $_POST['quantidade'], $_POST['imagem'])) {
 
         // Captura os valores do formulário
         $nome = $_POST['nome'];
@@ -33,10 +33,9 @@ try {
         $stmt->bindParam(':quantidade', $quantidade);
         $stmt->bindParam(':imagem', $imagem);
 
-        // Execução da consulta e verificação
+        // Execução da consulta e redirecionamento
         if ($stmt->execute()) {
-            // Redireciona de volta para o formulário após a inserção
-            header("Location: info_produtos.html?success=1");
+            header("Location: loja.php?success=1");
             exit();
         } else {
             echo "Erro ao inserir o produto.";
