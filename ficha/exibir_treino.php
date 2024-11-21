@@ -97,7 +97,7 @@ function generateFicha($nivel, $idade, $sexo, $foco) {
         </div>
 
         <div class="footer">
-            <a href="./about-coach.html" class="btn-voltar"><i class="bi bi-arrow-left-circle"></i>Voltar</a>
+            <a href="../index.html" class="btn-voltar"><i class="bi bi-arrow-left-circle"></i>Voltar</a>
         </div>
     </div>
 

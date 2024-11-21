@@ -107,9 +107,8 @@ if ($result->num_rows > 0) {
     exit();
 }
 
-$senha_hashed = password_hash($senha, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO usuarios (nome_completo, email, senha) VALUES ('$nome', '$email', '$senha_hashed')";
+$sql = "INSERT INTO usuarios (nome_completo, email, senha) VALUES ('$nome', '$email', '$senha')";
 
 if ($conn->query($sql) === TRUE) {
     echo "

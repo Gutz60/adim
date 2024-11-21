@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="wow-animation" lang="pt-br">
+<head>
+    <title>Adicionar Produto</title>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="TCC Etec - Raiane, paulo, nicolau pega no meu pau">
+  <meta name="date" content="Dec 26">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,700,700italic">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">]
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <style>
+
+ .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+
+    /* Estilo para a Navbar */
+.navbar {
+    background-color: #0a2140; /* Fundo azul escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Cor branca para os links */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link.active {
+    color: #7cc1de;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #7cc1de;
+    transform: scale(1.1); /* Efeito de zoom leve no hover */
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+.dropdown-menu {
+    background-color: #0a2140; /* Fundo azul escuro para o dropdown */
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #ffffff; /* Cor branca para os itens do dropdown */
+    font-size: 1rem;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #780088; /* Fundo roxo ao passar o mouse */
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Container do formulário */
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 25px;
+    margin-top: 20px;
+    background-color: #1e1c2e; /* Fundo escuro */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização do formulário */
+form {
+    background-color: #1e1c2e; /* Fundo do formulário */
+    padding: 25px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #FAFAFA;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #b9fab9;
+    border-radius: 8px;
+    background-color: #1e1c2e;
+    color: #b9fab9;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #b9fab9;
+}
+
+button {
+    background-color: #86f386;
+    color: #141414;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(102, 204, 102);
+    transform: scale(1.05);
+}
+
+
+/* Botão personalizado */
+.btn-primary {
+    display: block;
+    margin: 30px auto;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #830094;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #221e41;
+    transform: translateY(-3px);
+}
+
+/* Espaçamento entre os campos */
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+/* Ajuste para o placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: #bbb;
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .containerr {
+        padding: 20px;
+    }
+
+    .btn-primary {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="
+Você esta usando um navegador desatualizado. Para uma experiência de navegação mais rápida e segura, atualize."></a>
+  </div>
+  <div class="page-loader page-loader-variant-1">
+    <div><img width='250' height='250' src='images/logo.png' alt='' />
+      <div class="offset-top-41 text-center">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Page-->
+  <div class="page text-center">
+    <!-- Head da pagina (deixar mais bonito)-->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
+        <div class="container-fluid d-flex justify-content-between">
+          <a class="navbar-brand" href="login/login.html"><img src="images/navlogo.png" alt="" width="20%"></a>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto"> <!-- ms-auto para alinhar as opções à direita -->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-coach.html">Ficha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="info_produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  FeedBack
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="contacts.html">FeedBack</a></li>
+                  <li><a class="dropdown-item" href="inciden.html">Ajuda</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-cart3"></i></a>
+              </li>
+            </ul>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+<section class="section-98 section-md-110 novi-background" data-preset='{"title":"Content block 1","category":"content","id":"content-block-1"}'>
+    <h1>Adicionar Produto</h1>
+    <div class="container">
+        <form action="inserir_produto.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="nome" class="form-labell">Nome do Produto</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="descricao" class="form-labell">Descrição</label>
+                <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="preco" class="form-labell">Preço</label>
+                <input type="number" class="form-control" id="preco" name="preco" step="0.01" required>
+            </div>
+            <div class="mb-3">
+                <label for="quantidade" class="form-labell">Quantidade</label>
+                <input type="number" class="form-control" id="quantidade" name="quantidade" required>
+            </div>
+            <div class="mb-3">
+                <label for="imagem" class="form-labell">Caminho da Imagem</label>
+                <input type="text" class="form-control" id="imagem" name="imagem" required>
+            </div>
+            <button type="submit" class="button">Adicionar Produto</button>
+        </form>
+    </div>
+</section>
+
+
+
+
+  <footer
+    class="section-relative section-top-66 section-bottom-34 page-footer bg-gray-base context-dark novi-background"
+    data-preset='{"title":"Footer","category":"footer","reload":true,"id":"footer"}'>
+    <div class="container">
+      <div class="row text-xl-left">
+        <div class="col-md-12">
+          <div class="row">
+            <div
+              class="col-sm-10 col-md-3 text-left order-md-4 col-md-10 col-xl-3 offset-md-top-50 offset-xl-top-0 order-xl-2">
+              <div class="offset-top-50 text-sm-center text-xl-left">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-facebook icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-twitter icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-instagram icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-linkedin icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                </ul>
+              </div>
+              <p class=" offset-top-20">A.D.M &copy; <span id="copyright-year"></span> .
+                <a class="nav-link" href="pp.html">Política de Privacidade</a>
+                <!-- NÃO pode tirar isso --> Design&nbsp;by&nbsp;<a
+                  href="https://www.templatemonster.com">TemplateMonster</a>
+            </div>
+            <div class="col-sm-10 col-md-3 offset-top-66 order-md-1 offset-md-top-0 col-md-6 col-xl-3 order-xl-1">
+              <!-- Footer brand-->
+              <div class="footer-brand"><a href="index.html"><img width='200' height='200' src='images/logo.png'
+                    alt='' /></a></div>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- Java script-->
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
