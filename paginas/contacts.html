@@ -2,16 +2,296 @@
 <html class="wow-animation" lang="pt-br">
   <head>
     <title>Contato</title>
-    <meta charset="utf-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="keywords" content="intense web design multipurpose template">
-    <meta name="date" content="Dec 26">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,700,700italic">
-    <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="keywords" content="TCC Etec - Raiane, paulo, nicolau pega no meu pau">
+  <meta name="date" content="Dec 26">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Ubuntu:400,400italic,500,700,700italic">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">]
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+
+.navbar {
+    background-color: #0a2140; /* Fundo azul escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Cor branca para os links */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link.active {
+    color: #7cc1de;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #7cc1de;
+    transform: scale(1.1); /* Efeito de zoom leve no hover */
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+.dropdown-menu {
+    background-color: #0a2140; /* Fundo azul escuro para o dropdown */
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #ffffff; /* Cor branca para os itens do dropdown */
+    font-size: 1rem;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #780088; /* Fundo roxo ao passar o mouse */
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+}
+
+.contact-section {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Títulos e divisores */
+.section-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #d32f2f;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-divider {
+  height: 3px;
+  background-color: #d32f2f;
+  border: none;
+  width: 60px;
+  margin: 10px auto;
+}
+
+.contact-title,
+.social-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Parágrafos e botões */
+.section-description {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  background-color: #1976d2;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Centralizar o botão */
+.contact-info p {
+  text-align: center; /* Certifica-se de centralizar dentro do parágrafo */
+}
+
+/* Botão no hover */
+.btn:hover {
+  background-color: #1565c0;
+}
+
+
+/* Informações de contato */
+.contact-details {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.contact-details dt {
+  font-weight: bold;
+  color: #555;
+}
+
+.contact-details dd {
+  margin: 0 0 10px 10px;
+}
+
+.contact-details a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Redes Sociais */
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  color: #fff;
+  background-color: #333;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #d32f2f;
+}
+
+form {
+  flex-direction: column; /* Organiza os elementos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centraliza os elementos dentro da linha */
+}
+
+form .form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+form .form-control {
+  width: 100%; /* Ocupa a largura total */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form .form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  text-align: center; /* Centraliza o texto dos rótulos */
+}
+
+form .btnform, .btnform2 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center; /* Centraliza o texto do botão */
+}
+
+form .btnform {
+  background-color: #6c757d;
+  color: white;
+}
+
+form .btnform2 {
+  background-color: #dc3545;
+  color: white;
+}
+
+form .btnform2:hover {
+  background-color: #c72e3c;
+color: white;
+}
+
+form .btnform:hover {
+  color: white;
+  opacity: 0.9;
+}
+
+#employeeSection,
+#clientSection {
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.text-center {
+  text-align: center; /* Centraliza os botões */
+}
+
+h3 {
+  text-align: center; /* Centraliza o título */
+}
+
+select, textarea {
+  text-align: center; /* Centraliza o texto dos inputs */
+}
+
+
+  </style>
   </head>
   <body>
 
@@ -23,10 +303,10 @@
     -->
 
     <!-- IE Panel-->
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="../images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="
 Você esta usando um navegador desatualizado. Para uma experiência de navegação mais rápida e segura, atualize."></a></div>
     <div class="page-loader page-loader-variant-1">
-      <div><img width='250' height='250' src='images/logo.png' alt=''/>
+      <div><img width='250' height='250' src='../images/logo.png' alt=''/>
         <div class="offset-top-41 text-center">
           <div class="spinner"></div>
         </div>
@@ -35,56 +315,47 @@ Você esta usando um navegador desatualizado. Para uma experiência de navegaç�
     <!-- Page-->
     <div class="page text-center">
       <!-- Head da pagina (deixar mais bonito)-->
-      <header class="page-head slider-menu-position" data-preset='{"title":"Header with slider","category":"header, slider","reload":true,"id":"header-1"}'>
-        <!-- RD Navbar Transparent-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar container rd-navbar-floated rd-navbar-dark" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-auto-height="true" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-stick-up="true">
-            <div class="rd-navbar-inner">
-              <!-- RD Navbar Top Panel-->
-              <!-- RD Navbar Panel -->
-              <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
-                <!-- RD Navbar Top Panel Toggle-->
-                <button class="rd-navbar-top-panel-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-top-panel"><span></span></button>
-                <!--Navbar Brand-->
-                <div class="rd-navbar-brand"><a href="index.html"><img width='70' height='80' src='images/navlogo.png' alt=''/></a></div>
-              </div>
-              <div class="rd-navbar-menu-wrap">
-                <div class="rd-navbar-nav-wrap">
-                  <div class="rd-navbar-mobile-scroll">
-                    <!--Navbar Brand Mobile-->
-                    <div class="rd-navbar-mobile-brand"><a href="index.html"><img width='70' height='80' src='images/navlogo.png' alt=''/></a></div>
-                    <!-- RD Navbar Nav-->
-
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-
-                    <ul class=" navbar-nav rd-navbar-nav">
-                      <li><a href="index.html"><span>Home</span></a></li>
-                      <li><a href="about-coach.html"><span>Ficha</span></a></li>
-                      <li><a href="produtos.html"><span>Produtos</span></a></li>
-<li class="active nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Feedback
-        </a>
-        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="contacts.html">Feedback</a>
-          <a class="dropdown-item" href="ajuda.html">Ajuda</a>
+<header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark">
+        <div class="container-fluid d-flex justify-content-between">
+          <a class="navbar-brand" href="./ficha/login.html"><img src="../images/navlogo.png" alt="" width="25%"></a>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto"> <!-- ms-auto para alinhar as opções à direita -->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../ficha/index.html">Ficha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../ficha/loja.php">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="planos.html">Planos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  FeedBack
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="contacts.html">Ajuda</a></li>
+                  <li><a class="dropdown-item" href="">FeedBack</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shopping.php"><i class="bi bi-cart3"></i></a>
+              </li>
+            </ul>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-      </li>
-                      
-                    </ul>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-
+      </nav>
+    </header>
+    <header>
         <script>
         document.addEventListener("scroll", function() {
             const navbar = document.querySelector(".rd-navbar");
@@ -100,7 +371,7 @@ Você esta usando um navegador desatualizado. Para uma experiência de navegaç�
         <div class="context-dark">
           <!-- Modern Breadcrumbs-->
           <section>
-            <div class="parallax-container breadcrumb-modern bg-gray-darkest" data-parallax-img="images/img18.jpg">
+            <div class="parallax-container breadcrumb-modern bg-gray-darkest" data-parallax-img="../images/img18.jpg">
               <div class="parallax-content"> 
                 <div class="container section-top-98 section-bottom-34 section-lg-bottom-66 section-lg-98 section-xl-top-110 section-xl-bottom-41">
                   <h2 class="d-none d-lg-block offset-top-30"><span class="big">Precisa de ajuda?</span></h2>
@@ -114,127 +385,130 @@ Você esta usando um navegador desatualizado. Para uma experiência de navegaç�
       <section class="section-110 text-xl-left novi-background" data-preset='{"title":"Contact form","category":"content, form","reload":true,"id":"form"}'>
         <div class="container">
           <div class="row justify-content-sm-center justify-content-sm-center">
-            <div class="col-xl-4">
-              <div class="inset-xl-right-80">
-                <h3 class="font-weight-bold">Não fique calado!</h3>
-                <hr class="divider hr-xl-left-0 bg-red">
-                <p class="offset-top-41 offset-xl-top-50">Denunciar crimes como assédio, homofobia e discriminação é um passo essencial para garantir um ambiente seguro e respeitoso para todos. Ao relatar essas situações, você não só busca justiça para si, mas também ajuda a prevenir que outros passem pelo mesmo. Sua denúncia é um ato de coragem que contribui para uma comunidade mais acolhedora e inclusiva.</p>
-                <address class="contact-info offset-top-30 offset-xl-top-50">
-                  <div class="h6 text-uppercase font-weight-bold text-danger letter-space-none offset-top-none">Precisa de uma delegacia?</div>
-                  <dt>Veja a mais próxima de você</dt>
-                  <p> <a href="https://www.google.com/search?q=delegacia+perto+de+mim&oq=delegacia+perto+&gs_lcrp=EgZjaHJvbWUqCggAEAAYyQMYgAQyCggAEAAYyQMYgAQyBggBEEUYOTINCAIQABiSAxiABBiKBTINCAMQABiSAxiABBiKBTIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDgzNzBqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8" class="btn btn-success btn-lg shadow-sm">Ver</a></p>
-                  <dl class="offset-top-0">
-                    <dt>Telefone</dt>
-                    <dd><a href="tel:#">+55 12 99058-6343</a></dd>
-                  </dl>
-                  <dl>
-                    <dt>E-mail:</dt>
-                    <dd><a href="mailto:#">admsaudeeconforto@gmail.com</a></dd>
-                  </dl>
-                </address>
-                <address class="contact-info offset-top-30 offset-xl-top-50">
-                  <div class="h6 text-uppercase font-weight-bold text-danger letter-space-none">Redes Sociais</div>
-                  <div class="offset-top-50 text-sm-center text-xl-left">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-facebook icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-twitter icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-instagram icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-linkedin icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                          </ul>
-                  </div>
-                </address>
-              </div>
-            </div>
+            
+            <div class="contact-section">
+  <div class="contact-content">
+    <h3 class="section-title">Não fique calado!</h3>
+    <hr class="section-divider">
+    <p class="section-description">
+      Denunciar crimes como assédio, homofobia e discriminação é um passo essencial para garantir um ambiente seguro e respeitoso para todos. Ao relatar essas situações, você não só busca justiça para si, mas também ajuda a prevenir que outros passem pelo mesmo. Sua denúncia é um ato de coragem que contribui para uma comunidade mais acolhedora e inclusiva.
+    </p>
+    <div class="contact-info">
+      <h4 class="contact-title">Precisa de uma delegacia?</h4>
+      <p><a href="https://www.google.com/search?q=delegacia+perto+de+mim" target="_blank" class="btn btn-primary">Veja a mais próxima</a></p>
+      <dl class="contact-details">
+        <dt>Telefone:</dt>
+        <dd><a href="tel:+5512990586343">+55 12 99058-6343</a></dd><br>
+        <dt>E-mail:</dt>
+        <dd><a href="mailto:admsaudeeconforto@gmail.com">admsaudeeconforto@gmail.com</a></dd>
+      </dl>
+    </div>
+    <div class="social-media">
+      <h4 class="social-title">Redes Sociais</h4>
+      <ul class="social-icons">
+        <li><a class="novi-icon icon fa fa-facebook icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+        <li><a class="novi-icon icon fa fa-twitter icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+        <li><a class="novi-icon icon fa fa-instagram icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+        <li><a class="novi-icon icon fa fa-linkedin icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+
+
             <div class="col-md-8 offset-top-66 offset-xl-top-0">
               <h3 class="font-weight-bold">Relatório de Segurança do Cliente</h3>
-              <hr class="divider hr-xl-left-0 bg-red">
-              <!-- RD Mailform-->
-           <form class="rd-mailform" method="post" action="processa_formulario.php">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="form-group">
-                                    <label for="contact-name">Nome:</label>
-                                    <input class="form-control" id="contact-name" type="text" name="name" required>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group">
-                                    <label for="contact-phone">Telefone:</label>
-                                    <input class="form-control" id="contact-phone" type="tel" name="phone" required>
-                                </div>
-                            </div>
+              <hr class="section-divider">
+  <form class="rd-mailform" method="post" action="processa_formulario.php">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="form-group">
+          <label for="contact-name">Nome:</label>
+          <input class="form-control" id="contact-name" type="text" name="name">
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="form-group">
+          <label for="contact-phone">Telefone:</label>
+          <input class="form-control" id="contact-phone" type="tel" name="phone">
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="form-group">
+          <label>Você está relatando sobre:</label>
+          <label><input type="radio" name="personType" value="funcionario" onclick="toggleFields()"> Funcionário</label>
+          <label><input type="radio" name="personType" value="cliente" onclick="toggleFields()"> Outro Cliente</label>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div id="employeeSection" style="display: none;">
+          <label for="employeeName">Nome do Funcionário:</label>
+          <select id="employeeName" name="employeeName" class="form-control">
+            <option value="">Selecione</option>
+            <option value="João Silva">João Silva</option>
+            <option value="Maria Oliveira">Maria Oliveira</option>
+            <option value="Carlos Souza">Carlos Souza</option>
+            <option value="Ana Costa">Ana Costa</option>
+            <option value="Pedro Lima">Pedro Lima</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div id="clientSection" style="display: none;">
+          <label for="clientName">Nome do Cliente (caso souber):</label>
+          <input class="form-control" id="clientName" type="text" name="clientName">
+          <label for="clientDescription">Descreva-o:</label>
+          <textarea class="form-control" id="clientDescription" name="clientDescription"></textarea>
+        </div>
+      </div>
+      <div class="col-xl-12">
+        <label for="incidentType">Tipo de Incidente:</label>
+        <select id="incidentType" name="incidentType" class="form-control">
+          <option value="">Selecione</option>
+          <option value="Assédio">Assédio</option>
+          <option value="Homofobia">Homofobia</option>
+          <option value="Machismo">Machismo</option>
+          <option value="Racismo">Racismo</option>
+          <option value="Violência">Violência</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+      <div class="col-xl-12">
+        <label for="incidentDescription">Descreva o ocorrido:</label>
+        <textarea class="form-control" id="incidentDescription" name="incidentDescription"></textarea>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btnform" type="submit">Enviar</button>
+      <button class="btn btnform2" type="reset">Apagar</button>
+    </div>
+  </form>
+</div>
 
-                            <!-- Seção de Relato -->
-                            <div class="col-xl-6">
-                                <div class="form-group">
-                                    <label>Você está relatando sobre:</label>
-                                    <label><input type="radio" name="personType" value="funcionario" onclick="toggleFields()"> Funcionário</label>
-                                    <label><input type="radio" name="personType" value="cliente" onclick="toggleFields()"> Outro Cliente</label>
-                                </div>
-                            </div>
 
-                            <!-- Nome do Funcionário -->
-                            <div class="col-xl-6">
-                                <div id="employeeSection" style="display: none;">
-                                    <label for="employeeName">Nome do Funcionário:</label>
-                                    <select id="employeeName" name="employeeName" class="form-control">
-                                        <option value="João Silva">João Silva</option>
-                                        <option value="Maria Oliveira">Maria Oliveira</option>
-                                        <option value="Carlos Souza">Carlos Souza</option>
-                                        <option value="Ana Costa">Ana Costa</option>
-                                        <option value="Pedro Lima">Pedro Lima</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Nome do Cliente -->
-                            <div class="col-xl-6">
-                                <div id="clientSection" style="display: none;">
-                                    <label for="clientName">Nome do Cliente (caso souber):</label>
-                                    <input class="form-control" id="clientName" type="text" name="clientName">
-                                    <label for="clientDescription">Descreva-o:</label>
-                                    <textarea class="form-control" id="clientDescription" name="clientDescription"></textarea>
-                                </div>
-                            </div>
-
-                            <!-- Tipo de Incidente -->
-                            <div class="col-xl-12">
-                                <label for="incidentType">Tipo de Incidente:</label>
-                                <select id="incidentType" name="incidentType" class="form-control">
-                                    <option value="Assédio">Assédio</option>
-                                    <option value="Homofobia">Homofobia</option>
-                                    <option value="Machismo">Machismo</option>
-                                    <option value="Racismo">Racismo</option>
-                                    <option value="Violência">Violência</option>
-                                    <option value="Outro">Outro</option>
-                                </select>
-                            </div>
-
-                            <!-- Descrição do Incidente -->
-                            <div class="col-xl-12">
-                                <label for="incidentDescription">Descreva o ocorrido:</label>
-                                <textarea class="form-control" id="incidentDescription" name="incidentDescription" required></textarea>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <button class="btn btn-danger" type="submit">Enviar</button>
-                            <button class="btn btn-default" type="reset">Apagar</button>
-                        </div>
-                    </form> 
-            </div>
           </div>
         </div>
 
 
 
        <script>
-        // Função para mostrar ou ocultar as seções com base na seleção
-        function toggleFields() {
-            const personType = document.querySelector('input[name="personType"]:checked').value;
-            document.getElementById("employeeSection").style.display = personType === "funcionario" ? "block" : "none";
-            document.getElementById("clientSection").style.display = personType === "cliente" ? "block" : "none";
-        }
+function toggleFields() {
+  const employeeSection = document.getElementById('employeeSection');
+  const clientSection = document.getElementById('clientSection');
+  const personType = document.querySelector('input[name="personType"]:checked').value;
+
+  if (personType === 'funcionario') {
+    employeeSection.style.display = 'block';
+    clientSection.style.display = 'none';
+  } else if (personType === 'cliente') {
+    employeeSection.style.display = 'none';
+    clientSection.style.display = 'block';
+  }
+}
+
+
     </script>
 
 
@@ -245,7 +519,7 @@ Você esta usando um navegador desatualizado. Para uma experiência de navegaç�
 
       </section>
       <section data-preset='{"title":"Map","category":"content, map","reload":true,"id":"map"}'>
-        <div class="google-map-container" data-zoom="5" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:60}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:30}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ef8c25&quot;},{&quot;lightness&quot;:40}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#b6c54c&quot;},{&quot;lightness&quot;:40},{&quot;saturation&quot;:-40}]},{}]" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png">
+        <div class="google-map-container" data-zoom="5" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:60}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:30}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ef8c25&quot;},{&quot;lightness&quot;:40}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#b6c54c&quot;},{&quot;lightness&quot;:40},{&quot;saturation&quot;:-40}]},{}]" data-icon="../images/gmap_marker.png" data-icon-active="../images/gmap_marker_active.png">
           <div class="google-map"></div>
           <ul class="google-map-markers">
             <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
@@ -253,38 +527,49 @@ Você esta usando um navegador desatualizado. Para uma experiência de navegaç�
         </div>
       </section>
       <!-- Page Footer-->
-      <footer class="section-relative section-top-66 section-bottom-34 page-footer bg-gray-base context-dark novi-background" data-preset='{"title":"Footer","category":"footer","reload":true,"id":"footer"}'>
-        <div class="container">
-          <div class="row text-xl-left">
-            <div class="col-md-12">
-              <div class="row">
-                <div class="col-sm-10 col-md-3 text-left order-md-4 col-md-10 col-xl-3 offset-md-top-50 offset-xl-top-0 order-xl-2">
-                  <div class="offset-top-50 text-sm-center text-xl-left">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-facebook icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-twitter icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-instagram icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                            <li class="list-inline-item"><a class="novi-icon icon fa fa-linkedin icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
-                          </ul>
-                  </div>
-                  <p class="text-darker offset-top-20">A.D.M &copy; <span id="copyright-year"></span> .
-                  <!-- NÃO pode tirar isso --> Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">TemplateMonster</a>
-                </div>
-                <div class="col-sm-10 col-md-3 offset-top-66 order-md-1 offset-md-top-0 col-md-6 col-xl-3 order-xl-1">
-                  <!-- Footer brand-->
-                  <div class="footer-brand"><a href="index.html"><img width='200' height='200' src='images/logo.png' alt=''/></a></div>
-                  </p>
-                </div>
+      <footer
+    class="section-relative section-top-66 section-bottom-34 page-footer bg-gray-base context-dark novi-background"
+    data-preset='{"title":"Footer","category":"footer","reload":true,"id":"footer"}'>
+    <div class="container">
+      <div class="row text-xl-left">
+        <div class="col-md-12">
+          <div class="row">
+            <div
+              class="col-sm-10 col-md-3 text-left order-md-4 col-md-10 col-xl-3 offset-md-top-50 offset-xl-top-0 order-xl-2">
+              <div class="offset-top-50 text-sm-center text-xl-left">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-facebook icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-twitter icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-instagram icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                  <li class="list-inline-item"><a
+                      class="novi-icon icon fa fa-linkedin icon-xxs icon-circle icon-darkest-filled" href="#"></a></li>
+                </ul>
               </div>
+              <p class="offset-top-20">A.D.M &copy; <span id="copyright-year"></span> .
+                <a class="nav-link" href="pp.html">Política de Privacidade</a>
+                <!-- NÃO pode tirar isso --> Design&nbsp;by&nbsp;<a
+                  href="https://www.templatemonster.com">TemplateMonster</a>
+            </div>
+            <div class="col-sm-10 col-md-3 offset-top-66 order-md-1 offset-md-top-0 col-md-6 col-xl-3 order-xl-1">
+              <!-- Footer brand-->
+              <div class="footer-brand"><a href="index.html"><img width='200' height='200' src='../images/logo.png'
+                    alt='' /></a></div>
+              </p>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
-    <!-- Java script-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  </footer>
+  </div>
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- Java script-->
+  <script src="../js/core.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
 </html>
