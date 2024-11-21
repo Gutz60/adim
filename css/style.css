@@ -2433,86 +2433,6 @@ fieldset:disabled a.btn {
 	pointer-events: none;
 }
 
-.container-me{
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  background: var(--cor-terciaria);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.titulo-me{
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--cor-primaria);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.cartoes-me {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.cartao-me{
-  background: var(--cor-terciaria);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: calc(33.33% - 20px);
-  transition: transform 0.3s;
-}
-
-.cartao-me:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, var(--cor-secundaria), var(--cor-primaria));
-  color: var(--cor-terciaria);
-}
-
-.cartao-titulo-me {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--cor-secundaria);
-  margin-bottom: 10px;
-}
-
-.cartao-descricao-me {
-  font-size: 18px;
-  color: var(--cor-secundaria);
-  margin-bottom: 20px;
-}
-
-.botao-me {
-  background: var(--cor-primaria);
-  color: var(--cor-terciaria);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.botao-me:hover {
-  background: #ff3737;
-}
-
-/* Responsivo */
-@media (max-width: 1024px) {
-  .cartao-me {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 768px) {
-  .cartao-me {
-    width: 100%;
-  }
-}
-
 
 .btn-primary:hover {
 	color: #212529;
@@ -28581,7 +28501,7 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 	height: 12px;
 	line-height: 8px;
 	border-radius: 50%;
-	background: #434345;
+	background: #830094;
 	cursor: pointer;
 }
 
@@ -28625,12 +28545,12 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 	height: 20px;
 	line-height: 8px;
 	border-radius: 50%;
-	background: #7d0000;
+	background: #7cc1de;
 	cursor: pointer;
 }
 
 .owl-carousel-default .owl-dot.active, .owl-carousel-default .owl-dot:hover {
-	background: #86fdfb;
+	background: #7cc1de;
 }
 
 .owl-carousel-default .owl-next {
@@ -28651,11 +28571,11 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 
 .owl-carousel-class-light .owl-dot {
 	transition: .3s all ease;
-	background: #d9d9d9;
+	background: #7cc1de;
 }
 
 .owl-carousel-class-light .owl-dot.active, .owl-carousel-class-light .owl-dot:hover {
-	background: #ffce25;
+	background: #7cc1de;
 }
 
 .owl-carousel-dots-custom-style.owl-carousel-default .owl-dot:before {
